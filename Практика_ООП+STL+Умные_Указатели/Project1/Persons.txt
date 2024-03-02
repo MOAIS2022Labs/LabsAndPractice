@@ -1,6 +1,23 @@
+AMM
+S
 Ivanov
-2
+1
 5 5 5 5 5
-
+L
 Petrov
 lecture
+S
+Sidorov
+2
+5 5 5 5 5
+S
+Gavrilov
+1
+5 5 2 5 5
+S
+Romanov
+2
+5 5 5 5 5
+L
+Kaplieva
+Lecture

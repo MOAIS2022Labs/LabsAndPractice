@@ -38,7 +38,18 @@ public:
 			std::cout << arr[i] << ' ';
 		std::cout << '\n';
 	}
-
+	int kind()
+	{
+		int min_mark = arr[0];
+		for (int i = 1; i < 5; ++i)
+			if (arr[i] < min_mark)
+				min_mark = arr[i];
+		return min_mark;
+	}
+	int get_course()
+	{
+		return course;
+	}
 };
 
 class Lecture : public Person
