@@ -1,0 +1,8 @@
+﻿  Depo.cpp
+  Freight_Wagon.cpp
+  Passenger_Wagon.cpp
+  Source.cpp
+C:\Users\Хrom_Бrom_Йod\Desktop\ВГУ учеба\Программирование\C++ файлы source\4_Sem_1_Lab_Alg\4_Sem_1_Lab_Alg\Source.cpp(13,34): warning C4018: <: несоответствие типов со знаком и без знака
+  Wagon.cpp
+  Создание кода...
+  4_Sem_1_Lab_Alg.vcxproj -> C:\Users\Хrom_Бrom_Йod\Desktop\ВГУ учеба\Программирование\C++ файлы source\4_Sem_1_Lab_Alg\x64\Debug\4_Sem_1_Lab_Alg.exe
