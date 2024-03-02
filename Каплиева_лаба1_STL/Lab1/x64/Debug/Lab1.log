@@ -1,2 +1,6 @@
 ﻿  Library.cpp
-  Lab1.vcxproj -> D:\Универ\2 курс\Лабы\Алгоритмы\4 семестр\Lab1\x64\Debug\Lab1.exe
+  PrintEdition.cpp
+  Source.cpp
+D:\Универ\LabsAndPractice\Каплиева_лаба1_STL\Lab1\Source.cpp(31,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
+  Lab1.vcxproj -> D:\Универ\LabsAndPractice\Каплиева_лаба1_STL\x64\Debug\Lab1.exe
