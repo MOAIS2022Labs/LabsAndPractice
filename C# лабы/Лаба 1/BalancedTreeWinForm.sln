@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancedTreeWinForm", "BalancedTreeWinForm\BalancedTreeWinForm.csproj", "{7E182694-E200-4F16-AE7E-C79AA7A3C8EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalancedTreeLibrary", "BalancedTreeLibrary\BalancedTreeLibrary.csproj", "{1503EACD-E771-4CD9-A8AF-F63FA5C474DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E182694-E200-4F16-AE7E-C79AA7A3C8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E182694-E200-4F16-AE7E-C79AA7A3C8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E182694-E200-4F16-AE7E-C79AA7A3C8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E182694-E200-4F16-AE7E-C79AA7A3C8EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1503EACD-E771-4CD9-A8AF-F63FA5C474DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1503EACD-E771-4CD9-A8AF-F63FA5C474DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1503EACD-E771-4CD9-A8AF-F63FA5C474DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1503EACD-E771-4CD9-A8AF-F63FA5C474DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F66B51BF-0479-417E-A2BD-C72B879C2CDE}
+	EndGlobalSection
+EndGlobal
