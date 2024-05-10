@@ -1,0 +1,88 @@
+// 27. Дан одномерный массив из целых чисел. Найти сумму двух старших разрядов чисел
+
+#include <iostream>
+#include <Windows.h>
+#include <process.h>
+#include <algorithm>
+
+const size_t COUNT = 101;
+const size_t NTHREADS = 4;
+
+struct INFORM
+{
+	int* arr;
+	size_t left, right;
+	int sum{};
+};
+
+
+int sum_senior_ranks(int num)
+{
+	int prelast{};
+	while (num > 10)
+	{
+		prelast = num % 10;
+		num /= 10;
+	}
+	return num + prelast;
+}
+
+unsigned __stdcall sum(void* arg)
+{
+	INFORM* inform = (INFORM*)arg;
+	int local_sum{};
+	for (size_t i = inform->left; i < inform->right; ++i)
+		local_sum += sum_senior_ranks(inform->arr[i]);
+	inform->sum = local_sum;
+	_endthreadex(0);
+	return 0;
+}
+
+int sum_parallel(int* arr)
+{
+	HANDLE t[NTHREADS];
+	size_t block = COUNT / NTHREADS;
+	INFORM inform[NTHREADS];
+	for (size_t i = 0; i < NTHREADS; ++i)
+	{
+		inform[i].arr = arr;
+		inform[i].left = block * i;
+		inform[i].right = (i != NTHREADS - 1) ? block * (i + 1) : COUNT;
+		t[i] = (HANDLE)_beginthreadex(nullptr, 0, &sum, inform + i, 0, nullptr);
+	}
+	
+	WaitForMultipleObjects(NTHREADS, t, true, INFINITE);
+
+	int global_sum{};
+	for (size_t i = 0; i < NTHREADS; ++i)
+	{
+		global_sum += inform[i].sum;
+		CloseHandle(t[i]);
+	}
+	return global_sum;
+}
+
+void init_array(int* arr)
+{
+	for (size_t i = 0; i < COUNT; ++i)
+		arr[i] = rand() % 1000;
+}
+
+int sum_non_parallel(int* arr)
+{
+	int result{};
+	std::for_each(arr, arr + COUNT, [&result](int x) {result += sum_senior_ranks(x); });
+	return result;
+}
+
+int main()
+{
+	srand(GetTickCount());
+	int arr[COUNT];
+	init_array(arr);
+
+	std::cout << "non parallel = " << sum_non_parallel(arr) << '\n';
+	std::cout << "parallel = " << sum_parallel(arr) << '\n';
+
+	return 0;
+}
