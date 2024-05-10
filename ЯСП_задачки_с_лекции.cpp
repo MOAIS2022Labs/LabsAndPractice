@@ -2,17 +2,17 @@
 #include <algorithm>
 #include <vector>
 #include <map>
-#include <numeric> // для accumulate
+#include <numeric> // РґР»СЏ accumulate
 #include <sstream>
 
-// вывести на экран значения элементов заданного диапазона
+// РІС‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ Р·РЅР°С‡РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ Р·Р°РґР°РЅРЅРѕРіРѕ РґРёР°РїР°Р·РѕРЅР°
 template <typename T>
 void print_values(const T& x)
 {
 	for (auto it = std::cbegin(x); it != std::cend(x); ++it)
 		std::cout << *it << ' ';
 }
-// для map
+// РґР»СЏ map
 template <typename TKey, typename TValue>
 void print_values(const std::map<TKey, TValue> m)
 {
@@ -20,7 +20,7 @@ void print_values(const std::map<TKey, TValue> m)
 		std::cout << k << ": " << v << '\n';
 }
 
-// в обратном порядке
+// РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ
 template <typename T>
 void print_values_reverse(const T& x)
 {
@@ -37,7 +37,7 @@ using some_tuple = std::tuple<int, std::string, float>;
 
 std::tuple<int, std::string, float> t{ 1, "One", 1.f };
 
-// вывести только чётные элементы заданного диапазона в обратном порядке
+// РІС‹РІРµСЃС‚Рё С‚РѕР»СЊРєРѕ С‡С‘С‚РЅС‹Рµ СЌР»РµРјРµРЅС‚С‹ Р·Р°РґР°РЅРЅРѕРіРѕ РґРёР°РїР°Р·РѕРЅР° РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ
 template <typename T>
 void print_even_values_reverse(T x)
 {
@@ -49,7 +49,7 @@ void print_even_values_reverse(T x)
 		});
 }
 
-// объединить все строки в заданном диапазоне в одно значение
+// РѕР±СЉРµРґРёРЅРёС‚СЊ РІСЃРµ СЃС‚СЂРѕРєРё РІ Р·Р°РґР°РЅРЅРѕРј РґРёР°РїР°Р·РѕРЅРµ РІ РѕРґРЅРѕ Р·РЅР°С‡РµРЅРёРµ
 std::string concat(const std::vector<std::string>& vec)
 {
 	std::string result;
@@ -61,7 +61,7 @@ std::string concat(const std::vector<std::string>& vec)
 	return result;
 }
 
-// посчитать количество слов разделнных пробелом в тексте
+// РїРѕСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕРІ СЂР°Р·РґРµР»РЅРЅС‹С… РїСЂРѕР±РµР»РѕРј РІ С‚РµРєСЃС‚Рµ
 int count_words(const std::string& str)
 {
 	int count{};
@@ -83,13 +83,13 @@ int main()
 
 	std::vector<std::string> words{ "Loren", " ", "ipsum", " ", "dolor"," ", "sit", " ", "amet" };
 	std::cout << concat(words) << '\n';
-	// а можно через accumulate
+	// Р° РјРѕР¶РЅРѕ С‡РµСЂРµР· accumulate
 	std::cout << std::accumulate(std::cbegin(words), std::cend(words), std::string{}) << '\n';
 
 	std::string text = concat(words);
 	std::cout << count_words(text) << '\n';
 
-	// в современных плюсах не так. std::range сила!
+	// РІ СЃРѕРІСЂРµРјРµРЅРЅС‹С… РїР»СЋСЃР°С… РЅРµ С‚Р°Рє. std::range СЃРёР»Р°!
 
 	return 0;
 }
