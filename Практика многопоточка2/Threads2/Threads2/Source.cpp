@@ -52,7 +52,7 @@ int max_parallel_thread(int* arr)
 	return global_pair.second;
 }
 
-//для future
+//РґР»СЏ future
 std::pair<int, int> find_max_future(int* arr, size_t left, size_t right)
 {
 	int ma = arr[left], ma_i = left;
@@ -124,8 +124,8 @@ void find_max_critical_section(int* arr, size_t left, size_t right, std::pair<in
 			if (arr[i] == ma)
 				ma_i = i;
 	}
-	// в лабе спросить, если макс больше или равен, тогда ждём
-	if (ma >= global_max.first) // вроде так
+	// РІ Р»Р°Р±Рµ СЃРїСЂРѕСЃРёС‚СЊ, РµСЃР»Рё РјР°РєСЃ Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРµРЅ, С‚РѕРіРґР° Р¶РґС‘Рј
+	if (ma >= global_max.first) // РІСЂРѕРґРµ С‚Р°Рє
 	{
 		while (aflag.test_and_set())
 			Sleep(0);
@@ -161,7 +161,7 @@ int max_parallel_critical(int* arr)
 
 threadsave_stack st;
 
-// для stack
+// РґР»СЏ stack
 void find_max_stack(int* arr, std::pair<int, int>& global_max)
 {
 	while (!st.empty())
@@ -181,8 +181,8 @@ void find_max_stack(int* arr, std::pair<int, int>& global_max)
 					if (arr[i] == ma)
 						ma_i = i;
 			}
-			// в лабе спросить, если макс больше или равен, тогда ждём
-			if (ma > global_max.first) // вроде так
+			// РІ Р»Р°Р±Рµ СЃРїСЂРѕСЃРёС‚СЊ, РµСЃР»Рё РјР°РєСЃ Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРµРЅ, С‚РѕРіРґР° Р¶РґС‘Рј
+			if (ma > global_max.first) // РІСЂРѕРґРµ С‚Р°Рє
 			{
 				while (aflag.test_and_set())
 					Sleep(0);
@@ -230,7 +230,7 @@ int main()
 	int array[COUNT];
 	init_array(array);
 
-	// найти номер последнего максимального элемента в массиве
+	// РЅР°Р№С‚Рё РЅРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµРіРѕ РјР°РєСЃРёРјР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РјР°СЃСЃРёРІРµ
 	std::cout << "max non parallel = " << max_non_parallel(array) << '\n'
 		<< "max parallel = " << max_parallel_future(array) << '\n'
 		<< "max with critical section = " << max_parallel_critical(array) << '\n'
