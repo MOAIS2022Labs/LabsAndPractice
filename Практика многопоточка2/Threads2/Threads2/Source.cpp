@@ -125,7 +125,7 @@ void find_max_critical_section(int* arr, size_t left, size_t right, std::pair<in
 				ma_i = i;
 	}
 	// в лабе спросить, если макс больше или равен, тогда ждём
-	if (ma > global_max.first) // вроде так
+	if (ma >= global_max.first) // вроде так
 	{
 		while (aflag.test_and_set())
 			Sleep(0);
