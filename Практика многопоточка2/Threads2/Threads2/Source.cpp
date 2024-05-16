@@ -182,7 +182,7 @@ void find_max_stack(int* arr, std::pair<int, int>& global_max)
 						ma_i = i;
 			}
 			// в лабе спросить, если макс больше или равен, тогда ждём
-			if (ma > global_max.first) // вроде так
+			if (ma >= global_max.first) // вроде так
 			{
 				while (aflag.test_and_set())
 					Sleep(0);
