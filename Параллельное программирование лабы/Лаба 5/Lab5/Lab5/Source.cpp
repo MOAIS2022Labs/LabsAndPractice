@@ -22,7 +22,7 @@ int sum_senior_ranks(int num)
 
 void sum(int* arr, std::atomic_int& result)
 {
-	while (!que.empty())
+	//while (!que.empty())
 	{
 		std::pair<int, int> pos;
 		if (que.try_pop(pos))
