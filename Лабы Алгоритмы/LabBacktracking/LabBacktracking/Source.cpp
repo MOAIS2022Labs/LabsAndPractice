@@ -1,3 +1,5 @@
+// Найти все вершины графа, недостижимые из заданной.
+
 #include <iostream>
 #include <Windows.h>
 
