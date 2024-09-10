@@ -16,45 +16,44 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	//Выбор способа заполнения матрицы
-	int choice = 0;
-	std::cout << "Заполнить матрицу вручную >> 1\nЗаполнить матрицу с помощью текстового файла >> 2\n";
-	read_and_check(choice, true, 1, 2);
-
-	int n, m; //размерность матрицы
-	int** matrix = nullptr; //пустой указатель
-
-	//создание и заполнение матрицы согласно выбранному варианту
-	if (choice == 1)
-		matrix = fill_Matrix_from_console(n, m);
-	if (choice == 2)
-		matrix = fill_Matrix_from_file(n, m);
-	
-	if (matrix)
+	int choice = 1;
+	while (choice == 1)
 	{
-		print_Matrix(matrix, n, m);
+		//Выбор способа заполнения матрицы
+		
+		std::cout << "Заполнить матрицу вручную >> 1\nЗаполнить матрицу с помощью текстового файла >> 2\n";
+		read_and_check(choice, 1, 1, 2);
 
-		//matrix = transpose_Matrix(matrix, n, m);
+		int n, m; //размерность матрицы
+		int** matrix = nullptr; //пустой указатель
 
-		//print_Matrix(matrix, n, m);
+		//создание и заполнение матрицы согласно выбранному варианту
+		if (choice == 1)
+			matrix = fill_Matrix_from_console(n, m);
+		if (choice == 2)
+			matrix = fill_Matrix_from_file(n, m);
 
-		matrix = fix_Matrix(matrix, n, m); //удаление строк в матрице согласно условию задачи
-
-		//print_Matrix(matrix, n, m);
-		if (matrix) //если полученная матрица не пустая
+		if (matrix)
 		{
-			//matrix = transpose_Matrix(matrix, n, m);
+			print_Matrix(matrix, n, m, 1, 3, "\nВывести матрицу в консоль >> 1\nВывести матрицу в файл >> 2\nНе Выводить матрицу >> 3\n");
 
-			print_Matrix(matrix, n, m);
-
-			delete_Matrix(matrix, m);
+			matrix = fix_Matrix(matrix, n, m); //удаление строк в матрице согласно условию задачи
+			if (matrix) //если полученная матрица не пустая
+			{
+				print_Matrix(matrix, n, m, 1, 2, "\nВывести новую матрицу в консоль >> 1\nВывести новую матрицу в файл >> 2\n");
+				delete_Matrix(matrix, m);
+			}
+			else
+				std::cout << "\nВсе столбцы матрицы были удалены.";
 		}
 		else
-			std::cout << "\nВсе столбцы матрицы были удалены.";
+			std::cout << "\nТакого файла не существует!";
+
+		std::cout << "Продолжить выполнение программы?\nДа >> 1\nНет >> 2\n";
+		read_and_check(choice, 1, 1, 2);
 	}
-	else
-		std::cout << "";
 	
+	std::cout << "\n";
 	std::cin.get();
 	return 0;
 }
