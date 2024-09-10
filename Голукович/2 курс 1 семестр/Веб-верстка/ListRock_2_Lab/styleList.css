@@ -1,0 +1,11 @@
+.musicBand {
+    list-style-type: decimal;
+}
+
+.songs {
+    list-style-type: disc;
+}
+
+.chorus {
+    list-style-type: "- ";
+}
