@@ -1,0 +1,115 @@
+#include "UserInteraction.h"
+
+bool check_symbol(char chr)
+{
+	return chr >= '0' && chr <= '9';
+}
+
+void ReadAndCheck(unsigned int& input, const char* message, int a, int b)
+{
+	std::cout << message;
+	while (!(std::cin >> input) || input < a || input > b) // Требует вводить до тех пор, 
+														   // пока данные не введены корректно
+	{
+		std::cout << "Ошибка ввода!";
+		std::cin.clear();
+		std::cin.ignore(255, '\n');
+		std::cout << '\n' << message;
+	}
+}
+
+void ReadAndCheck(std::string& str, const char* message)
+{
+	std::cout << message;
+	std::cin >> str;
+	while (!ConditionString(str))
+	{
+		std::cout << "Ошибка ввода!\n" << message;
+		std::cin >> str;
+	}
+}
+
+int OutputMenu()
+{
+	std::cout << "Выберите, куда вывести время\n";
+	std::cout << "1. В консоль\n";
+	std::cout << "2. В файл\n";
+	unsigned int choice;
+	ReadAndCheck(choice, "->\t", 1, 2);
+	return choice;
+}
+
+int InputMenu(const char* message)
+{
+	std::cout << message << '\n';
+	std::cout << "1. Из консоли\n";
+	std::cout << "2. Из файла\n";
+	unsigned int choice;
+	ReadAndCheck(choice, "->\t", 1, 2);
+	return choice;
+}
+
+bool CheckFile(std::string fname)
+{
+	std::ifstream file(fname.c_str());
+	int result = 1;
+	if (!file)
+		result = 0;
+	file.close();
+	return result;
+}
+
+int OperationChoice()
+{
+	std::cout << "\nВыберите, какую операцию вы хотите произвести со временем\n";
+	std::cout << "1. Сложить 2 момента времени\n";
+	std::cout << "2. Вычесть один момент времени из второго\n";
+	std::cout << "3. Проверить моменты времени на равенство\n";
+	std::cout << "4. Проверить моменты времени на неравенство(!=)\n";
+	std::cout << "5. Проверить моменты времени на неравенство(>)\n";
+	std::cout << "6. Проверить моменты времени на неравенство(<)\n";
+	std::cout << "7. Проверить моменты времени на неравенство(>=)\n";
+	std::cout << "8. Проверить моменты времени на неравенство(<=)\n";
+	std::cout << "9. Вычислить раззницу в секундах между двумя моментами времени\n";
+	std::cout << "0. Закончить выбор операции\n";
+	unsigned int choice;
+	ReadAndCheck(choice, "->\t", 0, 9);
+	return choice;
+}
+
+int InizializationMenu()
+{
+	std::cout << "\nВыберите способ инициализации времени\n";
+	std::cout << "1. Числами\n";
+	std::cout << "2. Строкой\n";
+	std::cout << "3. Секундами\n";
+	std::cout << "4. Временем\n";
+	std::cout << "0. Закончить\n";
+	unsigned int choice;
+	ReadAndCheck(choice, "->\t", 0, 4);
+	return choice;
+}
+
+int ActionMenu()
+{
+	std::cout << "\nВыберите действие\n";
+	std::cout << "1. Вычесть некоторое количество секунд\n";
+	std::cout << "2. Добавить некоторое количество секунд\n";
+	std::cout << "3. Перевести время в секунды\n";
+	std::cout << "4. Перевести время в минуты\n";
+	std::cout << "5. Вывести момент времени на экран\n";
+	std::cout << "6. Напечатать момент времени в файл\n";
+	std::cout << "7. Вывести на экран строковое представление\n";
+	std::cout << "0. Закончить\n";
+	unsigned int choice;
+	ReadAndCheck(choice, "->\t", 0, 7);
+	return choice;
+}
+
+bool ConditionString(std::string str)
+{
+	return str.length() == 8 && check_symbol(str[0]) && check_symbol(str[1]) && check_symbol(str[3])
+		&& check_symbol(str[4]) && check_symbol(str[6])
+		&& check_symbol(str[7]) && str[2] == ':' && str[5] == ':' && std::stoi(str.substr(0, 2)) <= 23
+		&& std::stoi(str.substr(3, 5)) <= 59 && std::stoi(str.substr(6, 8)) <= 59;
+}

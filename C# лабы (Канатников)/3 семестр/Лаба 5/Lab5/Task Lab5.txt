@@ -1,0 +1,52 @@
+private void taskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtOutput.Clear();
+            var answer = "Строки не отличаются";
+            int countLines1 = txtInput1.Lines.Count();
+            int countLines2 = txtInput2.Lines.Count();
+            int countLinesMin = Math.Min(countLines1, countLines2);
+            for (var i = 0; i < countLinesMin && answer == "Строки не отличаются"; ++i)
+                {
+                    var line1 = txtInput1.Lines[i].TrimEnd();
+                    var line2 = txtInput2.Lines[i].TrimEnd();
+                    if (!String.IsNullOrWhiteSpace(line1) && !String.IsNullOrWhiteSpace(line2))
+                    {
+                        int minLength = Math.Min(line1.Length, line2.Length);
+                        for (var j = 0; j < minLength && answer == "Строки не отличаются"; ++j)
+                        {
+                            if (line1[j] != line2[j])
+                                answer = $"line {i}, symbol {j}";
+                        }
+                        if (answer == "Строки не отличаются" && line1.Length != line2.Length)
+                        {
+                            answer = $"line {i}, symbol {minLength}";
+                        }
+                    }
+                }
+            if (answer == "Строки не отличаются")
+            {
+                if (countLines1 > countLines2)
+                {
+                    for (var i = countLinesMin; i < countLines1; ++i)
+                        if (!String.IsNullOrWhiteSpace(txtInput1.Lines[i]))
+                            answer = $"line {i}, symbol 0";
+                }
+                else
+                    if (countLines1 < countLines2)
+                        for (var i = countLinesMin; i < countLines1; ++i)
+                            if (!String.IsNullOrWhiteSpace(txtInput2.Lines[i]))
+                                answer = $"line {i}, symbol 0";
+            }
+            if (countLinesMin == 1)
+            {
+                var line1 = txtInput1.Lines[0].TrimEnd();
+                var line2 = txtInput2.Lines[0].TrimEnd();
+                int minLength = Math.Min(line1.Length, line2.Length);
+                for (var i = 0; i < minLength && answer == "Строки не отличаются"; ++i)
+                {
+                    if (line1[i] != line2[i])
+                        answer = $"line 0, symbol {i}";
+                }
+            }
+            txtOutput.Text = answer;
+        }
