@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <FIO>Канатников Максим Андреевич</FIO>
+    <Course>1</Course>
+    <Group>9</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Аникандров Андрей Максимович</FIO>
+    <Course>1</Course>
+    <Group>9</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Сафонова Анастасия Максимовна</FIO>
+    <Course>1</Course>
+    <Group>91</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Гаршин Максим Сергеевич</FIO>
+    <Course>1</Course>
+    <Group>91</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Симонов Иван Алексеевич</FIO>
+    <Course>1</Course>
+    <Group>91</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Гречко Владислав Сергеевич</FIO>
+    <Course>2</Course>
+    <Group>31</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Contract</EducationForm>
+  </Student>
+  <Student>
+    <FIO>Иванов Иван Иванович</FIO>
+    <Course>2</Course>
+    <Group>31</Group>
+    <Exams>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>4</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Мат. Анализ</Subject>
+        <Mark>2</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Лин. Алгебра</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Дис. Математика</Subject>
+        <Mark>5</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Языки прогр</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>Физкультура</Subject>
+        <Mark>5</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Contract</EducationForm>
+  </Student>
+  <Student>
+    <FIO>уцк</FIO>
+    <Course>1</Course>
+    <Group>2</Group>
+    <Exams>
+      <Exam>
+        <Subject>2</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>2</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>2</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>2</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>2</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>3</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>3</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>3</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>3</Subject>
+        <Mark>3</Mark>
+      </Exam>
+      <Exam>
+        <Subject>3</Subject>
+        <Mark>3</Mark>
+      </Exam>
+    </Exams>
+    <EducationForm>Budget</EducationForm>
+  </Student>
+</ArrayOfStudent>
