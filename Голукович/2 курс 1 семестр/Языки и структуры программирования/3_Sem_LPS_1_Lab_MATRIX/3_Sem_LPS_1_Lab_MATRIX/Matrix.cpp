@@ -1,6 +1,6 @@
 #include "Matrix.h"
 
-void read_and_check(int& pick, const short flag, const int a, const int b)
+void read_and_check(int& pick, const short flag, const int a, const int b) //ввод и проверка данных с консоли
 {
 	bool end = false;
 	while (!end)
@@ -43,10 +43,10 @@ int** fill_Matrix_from_console(int& n, int& m) //функция возвращает указатель на
 	int** result = new int* [m]; //создание массива указателей
 	for (int i = 0; i < m; ++i)
 		result[i] = new int[n]; //создание массива из m элементов по адресу i-го указателя в массиве result
-	for (int i = 0; i < m; ++i) //ввод элементов матрицы
-		for (int j = 0; j < n; ++j)
+	for (int i = 0; i < n; ++i) //ввод элементов матрицы
+		for (int j = 0; j < m; ++j)
 			//result[i][j] = -10 + rand() % (21); //для заполнения случайными значениями от -10 до 10
-			read_and_check(result[i][j], -1, 0, 0);
+			read_and_check(result[j][i], -1, 0, 0);
 			//std::cin >> result[i][j];
 
 	return result;
@@ -60,29 +60,70 @@ int** fill_Matrix_from_file(int& n, int& m)
 	std::cout << "\n\nВведите имя текстового файла >> ";
 	std::cin.getline(name, 255);
 	std::ifstream file(name);
-
-	file >> n >> m; //ввод размерности матрицы из файла
-	int** result = new int* [m]; //создание массива указателей
-	for (int i = 0; i < m; ++i)
-		result[i] = new int[n]; //создание массива из m элементов по адресу i-го указателя в массиве result
-	for (int i = 0; i < m; ++i) //ввод элементов матрицы из файла
-		for (int j = 0; j < n; ++j)
-			file >> result[i][j];
+	int** result = nullptr;
+	if (file)
+	{
+		file >> n >> m; //ввод размерности матрицы из файла
+		result = new int* [m]; //создание массива указателей
+		for (int i = 0; i < m; ++i)
+			result[i] = new int[n]; //создание массива из m элементов по адресу i-го указателя в массиве result
+		for (int i = 0; i < n; ++i) //ввод элементов матрицы из файла
+			for (int j = 0; j < m; ++j)
+				file >> result[j][i];
+	}
 	file.close();
-
+	delete[] name;
+	name = nullptr;
 	return result;
 }
 
 //печать матрицы
-void print_Matrix(int** matrix, const int n, const int m)
+void print_Matrix(int** matrix, const int n, const int m, const int a, const int b, const char* message)
+{
+	int choice = 0;
+	std::cout << message;
+	read_and_check(choice, 1, a, b);
+	switch (choice)
+	{
+	case 1:
+		console_print_Matrix(matrix, n, m);
+		break;
+	case 2:
+		file_print_Matrix(matrix, n, m);
+		break;
+	default:
+		break;
+	}
+}
+
+void console_print_Matrix(int** matrix, const int n, const int m)
 {
 	std::cout << "\n\n";
 	for (int i = 0; i < n; ++i)
 	{
 		for (int j = 0; j < m; ++j)
-			std::cout << matrix[j][i] << ' ';
+			std::cout << std::setw(4)<< matrix[j][i] << ' ';
 		std::cout << '\n';
 	}
+}
+
+void file_print_Matrix(int** matrix, const int n, const int m)
+{
+	char* name = new char[255];
+	std::cout << "\n\nВведите имя текстового файла >> ";
+	std::cin.ignore();
+	std::cin.getline(name, 255);
+	std::ofstream file(name);
+	file << n << ' ' << m << '\n';
+	for (int i = 0; i < n; ++i)
+	{
+		for (int j = 0; j < m; ++j)
+			file << std::setw(4) << matrix[j][i] << ' ';
+		file << '\n';
+	}
+	delete[] name;
+	name = nullptr;
+	file.close();
 }
 
 ////транспонирование матрицы
