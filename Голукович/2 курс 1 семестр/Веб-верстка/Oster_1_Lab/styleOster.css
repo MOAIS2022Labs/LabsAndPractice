@@ -1,0 +1,125 @@
+* {
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+    /*padding: 1.5cm;
+    width: 21cm;
+    height: 29.7cm;
+    margin: 1.5cm;
+    margin: auto;
+    position: relative;*/
+}
+html, body {
+    color: #000;
+    font-family: Times New Roman, serif;
+}
+
+h1 {
+    font-size: 16pt;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+}
+h2 {
+    font-size: 20pt;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.TASK_1 {
+    font-size: 10pt;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-align: left;
+}
+.task_1 {
+    font-size: 14pt;
+    font-style: italic;
+    text-decoration: underline;
+}
+.body_of_task_1 {
+    font-size: 12pt;
+    text-indent: 1cm;
+    margin-top: 12pt;
+    margin-bottom: 12pt;
+}
+.answer_task_1 {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+.body_of_answer_task_1 {
+    margin-left: 1.5cm;
+    text-indent: -1.3cm;
+}
+
+.TASK_2 {
+    font-size: 9pt;
+    font-family: Courier New, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.task_2 {
+    font-size: 14pt;
+    font-style: italic;
+    text-decoration: underline;
+}
+.body_of_task_2 {
+    text-indent: 0;
+    line-height: 18pt;
+}
+.answer_task_2 {
+    letter-spacing: 4pt;
+    text-decoration: underline;
+}
+.body_of_answer_task_2 {
+    text-indent: 1cm;
+    margin-left: 6.5cm;
+    margin-right: 2.5cm;
+}
+
+.TASK_3 {
+    font-size: 8pt;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 3cm;
+    margin-right: 3.9cm;
+    text-indent: 0;
+}
+.task_3 {
+    font-size: 13pt;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    text-decoration: underline;
+}
+.body_of_task_3 {
+    font-size: 12pt;
+}
+
+.TASK_4 {
+    font-size: 10pt;
+    font-weight: normal;
+    text-align: right;
+    font-style: italic;
+}
+.task_4 {
+    font-size: 17pt;
+    font-style: italic;
+    text-decoration: underline;
+}
+.body_of_task_4 {
+    text-indent: 1cm;
+}
+.answer_task_4 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.body_of_answer_task_4 {
+    font-weight: bold;
+}

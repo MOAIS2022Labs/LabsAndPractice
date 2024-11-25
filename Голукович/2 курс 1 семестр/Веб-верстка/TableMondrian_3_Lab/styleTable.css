@@ -1,0 +1,14 @@
+.table{
+border: solid;
+border-color:Black;
+width: 1100px;
+margin: auto;
+height: 700px;
+border-collapse: collapse;
+}
+
+td{
+border: 8px solid Black;
+width: 100px;
+height: 70px;
+}

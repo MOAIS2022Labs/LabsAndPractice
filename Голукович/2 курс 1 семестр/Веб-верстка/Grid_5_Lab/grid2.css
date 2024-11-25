@@ -1,0 +1,81 @@
+body {
+    width: 756px;
+    height: 882px;
+    margin: 50px auto;
+}
+
+.container {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 292px 292px 292px;
+    grid-template-areas:
+    "A B C"
+    "D E F"
+    "G H I";
+}
+
+.box-a {
+    display: grid;
+    grid-area: D;
+}
+.box-b {
+    display: grid;
+    grid-area: C;
+}
+.box-c {
+    display: grid;
+    grid-area: B;
+}
+.box-d {
+    display: grid;
+    grid-area: I;
+}
+.box-e {
+    display: grid;
+    grid-area: A;
+}
+.box-f {
+    display: grid;
+    grid-area: H;
+}
+.box-g {
+    display: grid;
+    grid-area: E;
+}
+.box-h {
+    display: grid;
+    grid-area: G;
+}
+.box-i {
+    display: grid;
+    grid-area: F;
+}
+
+.container:hover .box-a{
+    grid-area: A;
+}
+.container:hover .box-b{
+    grid-area: B;
+}
+.container:hover .box-c{
+    grid-area: C;
+}
+.container:hover .box-d{
+    grid-area: D;
+}
+.container:hover .box-e{
+    grid-area: E;
+}
+.container:hover .box-f{
+    grid-area: F;
+}
+.container:hover .box-g{
+    grid-area: G;
+}
+.container:hover .box-h{
+    grid-area: H;
+}
+.container:hover .box-i{
+    grid-area: I;
+}

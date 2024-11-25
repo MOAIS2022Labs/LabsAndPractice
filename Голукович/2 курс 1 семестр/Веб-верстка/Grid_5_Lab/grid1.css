@@ -1,0 +1,236 @@
+body {
+    width: 756px;
+    height: 882px;
+    margin: 50px auto;
+}
+
+.container {
+    display: grid;
+    gap: 3px;
+    grid-template-areas:
+    "A B C"
+    "D E F"
+    "G H I";
+}
+
+.box-a {
+    display: grid;
+    grid-area: D;
+}
+.box-b {
+    display: grid;
+    grid-area: C;
+}
+.box-d {
+    display: grid;
+    grid-area: I;
+}
+.box-e {
+    display: grid;
+    grid-area: A;
+}
+.box-f {
+    display: grid;
+    grid-area: H;
+}
+.box-g {
+    display: grid;
+    grid-area: E;
+}
+.box-h {
+    display: grid;
+    grid-area: G;
+}
+.box-i {
+    display: grid;
+    grid-area: F;
+}
+
+
+.container:hover .box-a{
+    animation-name: a-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-b{
+    animation-name: b-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-d{
+    animation-name: d-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-e{
+    animation-name: e-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-f{
+    animation-name: f-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-g{
+    animation-name: g-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-h{
+    animation-name: h-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+.container:hover .box-i{
+    animation-name: i-animation;
+    animation-duration: 14s;
+    animation-direction: normal;
+}
+
+@keyframes a-animation {
+    from {
+        transform: none;
+    }
+    7.14% {
+        transform: none;
+    }
+    14.28% {
+        transform: translate(0px, -295px);
+    }
+    to {
+        transform: translate(0px, -295px);
+    }
+}
+
+@keyframes b-animation {
+    from {
+        transform: none;
+    }
+    85.68% {
+        transform: none;
+    }
+    92.82% {
+        transform: translate(-253px, 0px);
+    }
+    to {
+        transform: translate(-253px, 0px);
+    }
+}
+
+@keyframes d-animation {
+    from {
+        transform: none;
+    }
+    28.56% {
+        transform: none;
+    }
+    35.7% {
+        transform: translate(-253px, 0px);
+    }
+    49.98% {
+        transform: translate(-253px, 0px);
+    }
+    57.12% {
+         transform: translate(-253px, -295px);
+    }
+    71.4% {
+         transform: translate(-253px, -295px);
+    }
+    78.54% {
+         transform: translate(-506px, -295px);
+    }
+    to {
+        transform: translate(-506px, -295px);
+    }
+}
+
+@keyframes e-animation {
+    from {
+        transform: none;
+    }
+    7.14% {
+        transform: translate(253px, 0px);
+    }
+    78.54% {
+        transform: translate(253px, 0px);
+    }
+    85.68% {
+         transform: translate(253px, 295px);
+    }
+    to {
+        transform: translate(253px, 295px);
+    }
+}
+
+@keyframes f-animation {
+    from {
+        transform: none;
+    }
+    21.42% {
+        transform: none;
+    }
+    28.56% {
+        transform: translate(0px, -295px);
+    }
+    42.84% {
+        transform: translate(0px, -295px);
+    }
+    49.98% {
+        transform: translate(253px, -295px);
+    }
+    to {
+        transform: translate(253px, -295px);
+    }
+}
+
+@keyframes g-animation {
+    from {
+        transform: none;
+    }
+    14.28% {
+        transform: none;
+    }
+    21.42% {
+        transform: translate(-253px, 0px);
+    }
+    64.26% {
+        transform: translate(-253px, 0px);
+    }
+    71.4% {
+        transform: translate(-253px, 295px);
+    }
+    to {
+        transform: translate(-253px, 295px);
+    }
+}
+
+@keyframes h-animation {
+    from {
+        transform: none;
+    }
+    57.12% {
+        transform: none;
+    }
+    64.26% {
+        transform: translate(253px, 0px);
+    }
+    to {
+        transform: translate(253px, 0px);
+    }
+}
+
+@keyframes i-animation {
+    from {
+        transform: none;
+    }
+    35.7% {
+        transform: none;
+    }
+    42.84% {
+        transform: translate(0px, 295px);
+    }
+    to {
+        transform: translate(0px, 295px);
+    }
+}
